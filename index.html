@@ -20,17 +20,12 @@
         <main>
            
             <form action="/action_page.php">
-
                 <label for="cars">Calendar</label>
-                <input type="date" placeholder="mm-dd-yyyy" />
+                <input id="datePicker" type="date" placeholder="mm-dd-yyyy" />
                 <br>
-                <label for="cars">Service</label>
-                <br>
-               
-
-               
+                <label for="cars">Appointment</label>
                 <select  class="selectClass" id="Selector" >
-                    <option value="-1">Appointment</option>
+                    <option value="-1">Service Time</option>
                     <option value="10:00AM">10:00AM</option>
                     <option value="10:30AM">10:30AM</option>
                     <option value="11:00AM">11:00AM</option>
@@ -48,8 +43,18 @@
                     <option value="5:00PM">5:00PM</option>
                     <option value="5:30PM">5:30PM</option>
                 </select>
-                
-              </form>
+                <br>
+                <label for="cars">Nail Technicians</label>
+                <select  class="selectClass" id="Selector" >
+                    <option value="-1">Names</option>
+                    <option value="Cherie">Cherie</option>
+                    <option value="My">My</option>
+                    <option value="Yen">Yen</option>
+                    <option value="Tammy">Tammy</option>
+                </select>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
         </main>
         <footer>
 
