@@ -18,13 +18,22 @@
 
         </header>
         <main>
-           
-            <form action="/action_page.php">
+            <form action="assets/php/contact.php" method="POST">
+                <input name="name" type="text" placeholder="Full Name" required>
+                <br>
+                <input name="email" type="text" placeholder="Email" required>
+                <br>
+                <input name="phone" type="tel" placeholder="Telephone" required>
+                <br>
+                <br>
+                <textarea id="w3review" name="message" rows=5" cols="33"></textarea>
+                    <br>
+                    <br>
                 <label for="cars">Calendar</label>
-                <input id="datePicker" type="date" placeholder="mm-dd-yyyy" />
+                <input id="datePicker" type="date" placeholder="mm-dd-yyyy" name="date">
                 <br>
                 <label for="cars">Appointment</label>
-                <select  class="selectClass" id="Selector" >
+                <select  class="selectClass" id="Selector" name="servicetimes">
                     <option value="-1">Service Time</option>
                     <option value="10:00AM">10:00AM</option>
                     <option value="10:30AM">10:30AM</option>
@@ -45,7 +54,7 @@
                 </select>
                 <br>
                 <label for="cars">Nail Technicians</label>
-                <select  class="selectClass" id="Selector" >
+                <select  class="selectClass" id="Selector" name="nailtechnicians">
                     <option value="-1">Names</option>
                     <option value="Cherie">Cherie</option>
                     <option value="My">My</option>
@@ -53,7 +62,7 @@
                     <option value="Tammy">Tammy</option>
                 </select>
                 <br>
-                <input type="submit" value="Submit">
+                <input type="submit" name="submit" value="Submit">
             </form>
         </main>
         <footer>
