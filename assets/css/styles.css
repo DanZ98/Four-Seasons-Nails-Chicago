@@ -22,3 +22,34 @@ html {
   * html .clearfix { height: 1%; }
   .clearfix { display: block; }
   /* close commented backslash hack */
+
+  header{
+    background: url(../img/home-page-background-3.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+    background-attachment: fixed;
+  }
+
+  header .logo{
+    float: left;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+  }
+
+  nav ul{
+    float: right;
+  }
+
+  nav ul li{
+    display: inline-block;
+    text-decoration: none;
+  }
+
+  nav ul li a{
+    text-decoration: none;
+  }
+
