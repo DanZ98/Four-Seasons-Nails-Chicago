@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
 html {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -10,46 +12,77 @@ html {
   }
   
   .clearfix:after {
-       visibility: hidden;
-       display: block;
-       font-size: 0;
-       content: " ";
-       clear: both;
-       height: 0;
-       }
-  .clearfix { display: inline-block; }
-  /* start commented backslash hack \*/
-  * html .clearfix { height: 1%; }
-  .clearfix { display: block; }
-  /* close commented backslash hack */
-
-  header{
-    background: url(../img/home-page-background-3.jpg) no-repeat center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100vh;
-    background-attachment: fixed;
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
   }
+  * html .clearfix             { zoom: 1; } /* IE6 */
+  *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-  header .logo{
-    float: left;
-    max-width: 300px;
-    width: 100%;
-    height: auto;
-  }
+header{
+  background: url(../img/home-page-background-3.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
 
-  nav ul{
-    float: right;
-  }
+header .logo{
+  float: left;
+  margin: 30px 0 0 30px;
+}
 
+.logo:hover{
+  transition: 0.3s;
+  opacity: .7;
+  cursor: pointer;
+}
+
+nav .nav-links{
+  float: right;
+  margin: 50px 0 0 30px;
+}
+
+nav ul li{
+  display: inline-block;
+  text-decoration: none;
+  padding: 0 20px;
+}
+
+nav ul li a:link, nav ul li a:visited{
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+}
+
+nav ul li a:hover, nav ul li a:active{
+  color: #f0515f;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+nav ul li.dropdown-link{
+  display: none;
+}
+
+@media only screen and (max-width: 768px){
   nav ul li{
-    display: inline-block;
-    text-decoration: none;
+    display: none;
   }
 
-  nav ul li a{
-    text-decoration: none;
+  nav .nav-links{
+    margin-left: 0;
   }
 
+  nav ul li.dropdown-link{
+    display: block;
+    position: relative;
+    bottom: 6px;
+    font-size: 30px;
+  }
+}
