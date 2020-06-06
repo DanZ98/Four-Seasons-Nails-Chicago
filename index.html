@@ -24,65 +24,101 @@
                         <ul>
                             <li><a href="#" target="_blank">BOOKING</a></li>
                             <li><a href="#" target="_blank">CONTACT</a></li>
-                            <li class="dropdown-link"><a onclick="toggleDropdown()" href="#" target="_blank">☰</a></li>
                         </ul>
                     </div>
-                   
-                  
                 </div>
-             
             </nav>
+            <div class="hamburger-menu">
+                <input id="menu__toggle" type="checkbox" />
+                <label class="menu__btn" for="menu__toggle">
+                  <span></span>
+                </label>
+                <ul class="menu__box">
+                    <li><a class="menu__item" href="#">Главная</a></li>
+                    <li><a class="menu__item" href="#">Проекты</a></li>
+                    <li><a class="menu__item" href="#">Команда</a></li>
+                    <li><a class="menu__item" href="#">Блог</a></li>
+                    <li><a class="menu__item" href="#">Контакты</a></li>
+                </ul>
+              </div>
         </header>
         <main>
-            <form action="assets/php/contact.php" method="POST">
-                <input name="name" type="text" placeholder="Full Name" required>
-                <br>
-                <input name="email" type="email" placeholder="Email" required>
-                <br>
-                <input name="phone" type="tel" placeholder="Telephone" required>
-                <br>
-                <br>
-                <textarea id="w3review" name="message" rows=5" cols="33"></textarea>
+            <div id="form-container">
+                <h2>BOOK APPOINTMENT</h2>
+                <form action="assets/php/contact.php" method="POST">
+                    <label for="full name">Full Name*</label>
+                    <br>
+                    <input name="name" type="text" required>
+                    <br>
+                    <label for="email">Email*</label>
+                    <br>
+                    <input name="email" type="email" required>
+                    <br>
+                    <label for="telephone">Telephone*</label>
+                    <br>
+                    <input name="phone" type="tel" required>
                     <br>
                     <br>
-                <label for="cars">Calendar</label>
-                <input id="datePicker" type="date" placeholder="mm-dd-yyyy" name="date">
-                <br>
-                <label for="cars">Appointment</label>
-                <select  class="selectClass" id="Selector" name="servicetimes">
-                    <option value="-1">Service Time</option>
-                    <option value="10:00AM">10:00AM</option>
-                    <option value="10:30AM">10:30AM</option>
-                    <option value="11:00AM">11:00AM</option>
-                    <option value="11:30AM">11:30AM</option>
-                    <option value="12:00PM">12:00PM</option>
-                    <option value="12:30PM">12:30PM</option>
-                    <option value="1:00PM">1:00PM</option>
-                    <option value="1:30PM">1:30PM</option>
-                    <option value="2:00PM">2:00PM</option>
-                    <option value="2:30PM">2:30PM</option>
-                    <option value="3:00PM">3:00PM</option>
-                    <option value="3:30PM">3:30PM</option>
-                    <option value="4:00PM">4:00PM</option>
-                    <option value="4:30PM">4:30PM</option>
-                    <option value="5:00PM">5:00PM</option>
-                    <option value="5:30PM">5:30PM</option>
-                </select>
-                <br>
-                <label for="cars">Nail Technicians</label>
-                <select  class="selectClass" id="Selector" name="nailtechnicians">
-                    <option value="-1">Names</option>
-                    <option value="Cherie">Cherie</option>
-                    <option value="My">My</option>
-                    <option value="Yen">Yen</option>
-                    <option value="Tammy">Tammy</option>
-                </select>
-                <br>
-                <input type="submit" name="submit" value="Submit">
-            </form>
+                    <label for="message">Message</label>
+                    <br>
+                    <textarea id="w3review" name="message" rows=10" cols="112"></textarea>
+                        <br>
+                        <br>
+                    <label for="cars">Calendar*</label>
+                    <input id="datePicker" type="date" placeholder="mm-dd-yyyy" name="date" required>
+                    <br>
+                    <label for="cars">Appointment*</label>
+                    <select  class="selectClass" id="Selector" name="servicetimes">
+                        <option value="-1">Service Time</option>
+                        <option value="10:00AM">10:00AM</option>
+                        <option value="10:30AM">10:30AM</option>
+                        <option value="11:00AM">11:00AM</option>
+                        <option value="11:30AM">11:30AM</option>
+                        <option value="12:00PM">12:00PM</option>
+                        <option value="12:30PM">12:30PM</option>
+                        <option value="1:00PM">1:00PM</option>
+                        <option value="1:30PM">1:30PM</option>
+                        <option value="2:00PM">2:00PM</option>
+                        <option value="2:30PM">2:30PM</option>
+                        <option value="3:00PM">3:00PM</option>
+                        <option value="3:30PM">3:30PM</option>
+                        <option value="4:00PM">4:00PM</option>
+                        <option value="4:30PM">4:30PM</option>
+                        <option value="5:00PM">5:00PM</option>
+                        <option value="5:30PM">5:30PM</option>
+                    </select>
+                    <br>
+                    <label for="cars">Nail Technicians*</label>
+                    <select  class="selectClass" id="Selector" name="nailtechnicians">
+                        <option value="-1">Names</option>
+                        <option value="Cherie">Cherie</option>
+                        <option value="My">My</option>
+                        <option value="Yen">Yen</option>
+                        <option value="Tammy">Tammy</option>
+                    </select>
+                    <br>
+                    <input id="submit" type="submit" name="submit" value="Submit">
+                </form>
+            </div>
         </main>
+        <section>
+            <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.3822985585307!2d-87.62352608426644!3d41.690682085100164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e242977414c69%3A0x249beb7811d36c73!2s11200%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL%2060628!5e0!3m2!1sen!2sus!4v1591332940533!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div id="contact-info">
+                <h3>Address</h3>
+                <p>11200 S. Michigan Ave</p>
+                <p>Chicago IL 606028</p>
+                <h3>Hours</h3>
+                <p>Monday - Saturday: 10am - 6pm</p>
+                <p>Sunday: 10am - 5pm</p>
+                <h3>Contact</h3>
+                <p>ngoclien081061@gmail.com</p>
+                <p>773.941.6265</p>
+            </div>
+        </section>
         <footer>
-
+            <p>COPYRIGHT 2020 FOURSEASONSNAILS.COM</p>
         </footer>
         
     </div>
