@@ -10,40 +10,46 @@
     <link href="" sizes="5x5" rel="icon" type="image/png" /><!-- fav firefox  browser icon -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
-    <script src="assets/js/modernizr-custom.js"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><!-- fontawesome min css -->
+    <link rel="stylesheet" type="text/css" href="assets/css/font-awesome-animation.min.css"/><!-- fontawesome animation -->
+   <script src="assets/js/modernizr-custom.js"></script> 
 </head>
 <body>
-    <div id="wrapper">
+    <div>
+       <a id="home"></a>
+       <!-- Mobile hamburger menu -->
+       <label id="mobile-hamburger-menu">
+        <input type='checkbox'>
+        <span class='menu'> <span class='hamburger'></span> </span>
+        <ul>
+          <li> <a href='#booking'>Booking</a> </li>
+          <li> <a href='#contact'>Contact</a> </li>
+        </ul>
+        </label>
         <header>
             <nav>
                 <div class="clearfix">
                     <div class="logo">
-                        <img src="assets/img/four-seasons-nails-logo.png" alt="Four Seasons Nails">
+                        <a href="#"><img src="assets/img/four-seasons-nails-logo.png" alt="Four Seasons Nails"></a>
                     </div>
                     <div class="nav-links">
                         <ul>
-                            <li><a href="#" target="_blank">BOOKING</a></li>
-                            <li><a href="#" target="_blank">CONTACT</a></li>
+                            <li><a href="#booking">BOOKING</a></li>
+                            <li><a href="#contact">CONTACT</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-            <div class="hamburger-menu">
-                <input id="menu__toggle" type="checkbox" />
-                <label class="menu__btn" for="menu__toggle">
-                  <span></span>
-                </label>
-                <ul class="menu__box">
-                    <li><a class="menu__item" href="#">Главная</a></li>
-                    <li><a class="menu__item" href="#">Проекты</a></li>
-                    <li><a class="menu__item" href="#">Команда</a></li>
-                    <li><a class="menu__item" href="#">Блог</a></li>
-                    <li><a class="menu__item" href="#">Контакты</a></li>
-                </ul>
-              </div>
+            <div class="header-copy">
+                <h1>Visit FOUR SEASONS NAILS IN CHICAGO</h1>
+                <p>WE OPEN <font class="date">JUNE 22</font></p>
+            </div>
+            <a href="#booking"><i class="fa fa-angle-double-down arrow-icon faa-flash animated" aria-hidden="true"></i></a>
         </header>
         <main>
+            <!-- Contact form -->
             <div id="form-container">
+                <a id="booking"></a>
                 <h2>BOOK APPOINTMENT</h2>
                 <form action="assets/php/contact.php" method="POST">
                     <label for="full name">Full Name*</label>
@@ -101,7 +107,15 @@
                 </form>
             </div>
         </main>
+        <section class="nail-background">
+            <div class="covid-19-info">
+                <h3>COVID-19 WAIVER FORM</h3>
+                <a href="ftp://danz98@160.153.90.228/public_html/danzins.co/assets/images/4.1-Uverse-header.jpg" download="Release_of_Liability_Waiver.pdf" target="_blank"><i class="fa fa-file-text-o pdf" aria-hidden="true"></i></a>
+            </div>
+            
+        </section>
         <section>
+            <a id="contact"></a>
             <div id="map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.3822985585307!2d-87.62352608426644!3d41.690682085100164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e242977414c69%3A0x249beb7811d36c73!2s11200%20S%20Michigan%20Ave%2C%20Chicago%2C%20IL%2060628!5e0!3m2!1sen!2sus!4v1591332940533!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
             </div>
@@ -115,14 +129,19 @@
                 <h3>Contact</h3>
                 <p>ngoclien081061@gmail.com</p>
                 <p>773.941.6265</p>
+                <a href="#home">
+                    <i class="fa fa-angle-double-up contact-arrow faa-flash animated" aria-hidden="true"></i>
+                </a>
             </div>
         </section>
-        <footer>
+       <footer>
             <p>COPYRIGHT 2020 FOURSEASONSNAILS.COM</p>
         </footer>
-        
     </div>
-<script src="assets/js/jquery-3.5.1.min.js"></script> 
+<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>  -->
+
+<script src="assets/js/jquery.com:jquery-3.5.1.min.js"></script>  
 <script src="assets/js/script.js"></script>     
 </body>
 </html>
